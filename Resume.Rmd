@@ -1,0 +1,182 @@
+---
+title: "Chrissy Farish"
+description: |
+  Resume
+
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\begin{center}
+
+
+Christina Farish  
+
+5 Henderson Lane  
+
+Doddsville, MS 38736  
+
+cfarish78@yahoo.com  
+
+662-207-9962  
+
+\end{center}
+
+
+
+# Career Objective  	
+ An accounting position utilizing previous experience and knowledge in a business environment. 
+ 	 
+
+# Skills 	 
+ Skilled in all aspects of office administration, organization of filing systems, use of electronic office equipment, handling multi-line phone systems, reception, data entry, and banking. Consistently noted by managers and staff for superior job performance and timely completion of all assignments. Knowledgeable in computer operations and applications including Banner – Finance, Human Resources, Accounts Receivable; Cognos Reporting Software, A/S400, Windows, QuickBooks Pro, Microsoft Word, Excel, Access, PowerPoint, WordPerfect, Internet, E-mail, and basic typing and keyboarding skills. Introduced to VLOOKUP in Excel, Tableau, and R Studio.
+ 	 
+ 
+# Experience 
+  
+2016 – 2018 *Assistant Comptroller* Delta State University  Cleveland, MS 
+ 
++	Data entry of majority of the journal entries 
++	Reconcile multiple bank statements that had not been reconciled to zero in years 
++	Print Accounts Payable and Payroll checks 
++	Worked the outstanding check listing for Payroll and Accounts Payable 
++	Processed online student refunds and travel/reimbursement checks to faculty and staff 
++	File and organize journal entries 
++	Assist with work-study monthly reconciliation 
+ 
+2016 – 2016 	 	*Staff Accountant* Fred T. Neely & Company 	 	 	Ruleville, MS 
+ 
++	Process Weekly/Biweekly/Monthly/Semi-Monthly Payrolls 
++	Make 941, 940, State Withholding, State Unemployment deposits 
++	Process sales tax reports and payments 
++	Assist in the preparation of income tax returns 
++	Reconcile Bank Statements 
++	Process invoices through accounts payable 
++	Prepare 941 Quarterly Reports 
++	Prepare 940 Quarterly Reports 
++	Enroll employees for a certain client into Blue Cross Blue Shield 
+ 
+2015 – 2016 	 	*Accountant I* University of Mississippi 	 	 	Oxford, MS 
+ 
++	Enter manual paybacks and disbursements into two separate software system 
++	Reconcile Miscellaneous Scholarship Account 
++	Create and maintain Aid Id’s 
++	Key memos to student packages 
++	Email students about paybacks and disbursements 
+ 
+2008 - 2015 	 	*Staff Accountant* Mississippi Delta Community College 	Moorhead, MS 
+ 
++	Prepare, verify, and control the entering of journal entries and adjustments to all funds 
++	Code receipts and disbursements 
++	Edit and post to general ledger 
++	Reconcile bank statements for all funds
++	File accounting documents journal adjustments, general ledger adjustments, etc. 
++	Reconciling and transferring monies and deposits between funds
++	Prepare 941 Quarterly Reports
++	Assist in daily cash count 
++	Assist with the Fall, Spring and Summer registration of students 
++	Utilize Excel to prepare detail spreadsheets on various funds
++	Prepare monthly sales tax report 
++	Process Biweekly and Workstudy payrolls 
++	Prepare Indirect Cost Rate 
++	Assist with End of Year Reconciliation
++	Develop various reports using Cognos
++	Establish and maintain credit card processing systems for the Business Office and bookstores on all campuses
++	Uploading files to the bank for student account refunds
++	Assist Accounts Payable Manager in updating W-9 information for all vendors. 
++	Prepare daily deposits for bookstore 
+ 
+2007 - 2008 	 	*Student Accounts Manager* Mississippi Delta Community College 	Moorhead, MS 
+
++	Involved in all aspects of customer service for the students including solving problems, accessing customer accounts, and receipting student payments. 
++	Invoicing of MPACT, Americorp, hospital scholarships, National Guard assistance, and various other scholarships
++	Reconciliation of scholarship funds 
++	Worked with various offices on campus to ensure proper student account fees being processed. 
++	Developing various reports using queries in A/S400. 
+  
+ 
+2001 - 2007 	 	*Office Manager* Gardner Engineering, P.A. 	Indianola, MS 
+
++	Managed weekly payroll process for 25 employees in two company locations.
++	Processed all payroll deductions and filing SIMPLE IRA, medical, and garnishments 
++	Managed Accounts Receivable and Accounts Payable for the entire company 
++	Administered employee payroll, company taxes, and maintained IRA Retirement Plan 
++	Authorized petty cash, check distributions, and bank deposits 
++	Prepared various tax forms including Forms 941, 940, 1099-MISC, W2, and W3 
++	Performed monthly bank reconciliation. 
++	Prepared numerous weekly internal reports for company officers
++	Human Resource administration
++	Enrolled employees into benefit plans and SIMPLE IRA enrollments 
+  
+1997 - 2001 	 	*Secretary* Gardner Engineering, P.A. 	Indianola, MS 
+
++	Accomplished general office duties 
++	Created State Aid required forms in Microsoft Excel 
++	Assisted with Monthly Estimate Billings 
++	Maintained daily diaries on various state and municipality jobs    • Supervised the reorganization of the central office filing system 
+  
+ 
+1995 - 1997 	 	*Pharmacy Technician/Clerk* Fred's Pharmacy 	Indianola, MS 
+
++	Responsible for maintaining adequate levels of inventory
++	Managed sales transactions 
++	Assisted Pharmacists in filling prescriptions  
+ 
+
+# Education 
+  
++ 2001 	 	B.B.A., Accounting  
+ Delta State University  
+ Cleveland, MS    
+
++ 2003 	 	M.B.A., Business Administration  
+ Delta State University  
+ Cleveland, MS   
+ 	 
++ 2018 	 	Accounting Bridge Program  
+ Auburn University Online  
+ Auburn, AL
+
++ 2021    Masters of Professional Accountancy  
+ Mississippi State University Online  
+ Starkville, MS                            	 
+ 	 
+ 
+# Activities and Honors 
+  
++ 	Dean's List
++ 	President's List 
++ 	Member, Student Accounting and Business Association 
++ 	Member, Accounting Honor Society 
++ 	Member, Career Day Service Ambassador 
++   Member, Delta Mu Delta. Business Honor Society 
+ 	 
+ 	 
+ 
+# Workshops and Seminars 	
+
+  		
++ Payroll Basics in Mississippi, Lorman Education Services, Jackson, MS, 2003. A one-day seminar designed to increase the participant’s knowledge of payroll laws and improve their ability to effectively manage and administer the payroll.  
+                    
++ The Essentials of Payroll Management, Rockhurst University Continuing Education Center, Inc., Jackson, MS, 2002. An intensive one-day workshop and legal update for payroll professionals. 
+ 	 	
+		
+ 
+# References 
+ 	 	
++ 	Laura Chisolm  
+Accounts Payable/Receivable Specialist     
+Pearl River Community College  
+601-403-1208  
+lchisolm@prcc.edu 
+ 
++   Sheron Burford 
+Bookkeeper  
+Washington School   
+662-334-4096  
+sburford@generals.ws 	 
+ 

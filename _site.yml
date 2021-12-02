@@ -1,0 +1,22 @@
+name: "."
+title: "mfeo"
+description: |
+  mfeo
+output_dir: "docs"
+theme: postcards.css
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Resume"
+      href: Resume.html
+    - text: "Projects"
+      href: about.html 
+      menu:
+        - text: "R Squared"
+          href: RSquared.html
+        - text: "Machine Learning Model"
+          href: Machine_Learning_Model.html
+        - text: "Final Project"
+          href: FinalProject.html
+output: distill::distill_article

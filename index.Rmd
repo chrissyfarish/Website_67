@@ -1,0 +1,21 @@
+---
+title: "Chrissy Farish"
+image: "chrissy.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/chrissy-farish-102800226/"
+  - label: GitHub
+    url: "https://github.com/chrissyfarish"
+  - label: Email
+    url: "mailto:cfarish78@yahoo.com"
+
+site: distill::distill_website
+output:
+  postcards::trestles
+---
+
+
+I am a trained accountant living in the Mississippi Delta area. 
+Currently I working on my Masters of Professional Accounting degree with a Minor in Data Analytics. I love talking about books, cats, and hunting.
+
+![](Daisy.JPG){width=85%}

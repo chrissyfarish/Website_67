@@ -1,0 +1,9362 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>mfeo: Final Project</title>
+
+  <meta property="description" itemprop="description" content="New dataset"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-12-02"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-12-02"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="mfeo: Final Project"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="New dataset"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="mfeo"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="mfeo: Final Project"/>
+  <meta property="twitter:description" content="New dataset"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Final Project"]},{"type":"character","attributes":{},"value":["New dataset\n"]},{"type":"character","attributes":{},"value":["2021-12-02"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+  @import url('https://fonts.googleapis.com/css2?family=Amiri');
+  @import url('https://fonts.googleapis.com/css2?family=Bitter');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono');
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    "Amiri", serif;
+    --mono-font:       "DM Mono", monospace;
+    --body-font:       "Bitter", sans-serif;
+    --navbar-font:     "Amiri", serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;    
+    --text-color:       #ff414b; /* edited */
+    --text-size:        15px;
+    --hover-color:      #dd424c; /* edited */
+    --bkgd-color:       #ffd8db; /* edited */
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <link href="site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+  <script src="site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Final Project","description":"New dataset","authors":[],"publishedDate":"2021-12-02T00:00:00.000-06:00"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">mfeo</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="Resume.html">Resume</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Projects
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="RSquared.html">R Squared</a>
+<a href="Machine_Learning_Model.html">Machine Learning Model</a>
+<a href="FinalProject.html">Final Project</a>
+</div>
+</div>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Final Project</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>New dataset</p></p>
+</div>
+
+
+<div class="d-article">
+<p>The dataset used for this project come from Kaggle, and it shows how fuel prices correlate with Unemployment. In this project, I will try to predict that the higher the unemployment leads to higher gas prices.</p>
+<p>We begin by looking at the descriptive analytics.The standard deviation shows that Fuel Prices are close to the norm at 0.43, while Unemployment is skewed by 1.88.</p>
+<p>The machine learning model used is the K-nn (Nearest Neighbor) model. This model is an algorithim that can solve classification and regression problems.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/load.html'>load</a></span><span class='op'>(</span>file<span class='op'>=</span><span class='st'>"Features_data_set.rda"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/topepo/caret/'>caret</a></span><span class='op'>)</span>
+<span class='va'>Features_data_set</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='va'>Features_data_set</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='fu'>psych</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/psych/man/describe.html'>describe</a></span><span class='op'>(</span><span class='va'>Features_data_set</span><span class='op'>)</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>kableExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kable_styling.html'>kable_styling</a></span><span class='op'>(</span><span class='st'>"striped"</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>kableExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/scroll_box.html'>scroll_box</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>"100%"</span>,height<span class='op'>=</span><span class='st'>"300px"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+vars
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+n
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+mean
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+sd
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+median
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+trimmed
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+mad
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+min
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+max
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+range
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+skew
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+kurtosis
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+se
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Store
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+20.386660
+</td>
+<td style="text-align:right;">
+1.207617e+01
+</td>
+<td style="text-align:right;">
+20.0000
+</td>
+<td style="text-align:right;">
+19.974653
+</td>
+<td style="text-align:right;">
+13.3434000
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+<td style="text-align:right;">
+45.0000
+</td>
+<td style="text-align:right;">
+44.00000
+</td>
+<td style="text-align:right;">
+0.2291798
+</td>
+<td style="text-align:right;">
+-0.9199640
+</td>
+<td style="text-align:right;">
+0.2654906
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Date*
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+35.101982
+</td>
+<td style="text-align:right;">
+2.076426e+01
+</td>
+<td style="text-align:right;">
+34.0000
+</td>
+<td style="text-align:right;">
+35.008449
+</td>
+<td style="text-align:right;">
+26.6868000
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+<td style="text-align:right;">
+70.0000
+</td>
+<td style="text-align:right;">
+69.00000
+</td>
+<td style="text-align:right;">
+0.0545191
+</td>
+<td style="text-align:right;">
+-1.2317835
+</td>
+<td style="text-align:right;">
+0.4564952
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Temperature
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+52.516979
+</td>
+<td style="text-align:right;">
+1.848305e+01
+</td>
+<td style="text-align:right;">
+51.4200
+</td>
+<td style="text-align:right;">
+52.406089
+</td>
+<td style="text-align:right;">
+21.0084420
+</td>
+<td style="text-align:right;">
+-7.2900
+</td>
+<td style="text-align:right;">
+95.9100
+</td>
+<td style="text-align:right;">
+103.20000
+</td>
+<td style="text-align:right;">
+0.0301572
+</td>
+<td style="text-align:right;">
+-0.6253938
+</td>
+<td style="text-align:right;">
+0.4063436
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fuel_Price
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+3.600298
+</td>
+<td style="text-align:right;">
+2.793347e-01
+</td>
+<td style="text-align:right;">
+3.6100
+</td>
+<td style="text-align:right;">
+3.603051
+</td>
+<td style="text-align:right;">
+0.2905896
+</td>
+<td style="text-align:right;">
+2.8720
+</td>
+<td style="text-align:right;">
+4.3010
+</td>
+<td style="text-align:right;">
+1.42900
+</td>
+<td style="text-align:right;">
+-0.1089610
+</td>
+<td style="text-align:right;">
+-0.4844894
+</td>
+<td style="text-align:right;">
+0.0061411
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MarkDown1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+9717.665297
+</td>
+<td style="text-align:right;">
+1.137764e+04
+</td>
+<td style="text-align:right;">
+6397.7200
+</td>
+<td style="text-align:right;">
+7472.803362
+</td>
+<td style="text-align:right;">
+5132.3312460
+</td>
+<td style="text-align:right;">
+-563.9000
+</td>
+<td style="text-align:right;">
+103184.9800
+</td>
+<td style="text-align:right;">
+103748.88000
+</td>
+<td style="text-align:right;">
+3.4678921
+</td>
+<td style="text-align:right;">
+15.8541281
+</td>
+<td style="text-align:right;">
+250.1334788
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MarkDown2
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+4426.859778
+</td>
+<td style="text-align:right;">
+1.015466e+04
+</td>
+<td style="text-align:right;">
+404.6100
+</td>
+<td style="text-align:right;">
+1881.139300
+</td>
+<td style="text-align:right;">
+590.9791860
+</td>
+<td style="text-align:right;">
+-265.7600
+</td>
+<td style="text-align:right;">
+104519.5400
+</td>
+<td style="text-align:right;">
+104785.30000
+</td>
+<td style="text-align:right;">
+4.2007117
+</td>
+<td style="text-align:right;">
+23.0579620
+</td>
+<td style="text-align:right;">
+223.2467055
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MarkDown3
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+2247.535911
+</td>
+<td style="text-align:right;">
+1.330599e+04
+</td>
+<td style="text-align:right;">
+34.1000
+</td>
+<td style="text-align:right;">
+76.566494
+</td>
+<td style="text-align:right;">
+47.5914600
+</td>
+<td style="text-align:right;">
+-179.2600
+</td>
+<td style="text-align:right;">
+149483.3100
+</td>
+<td style="text-align:right;">
+149662.57000
+</td>
+<td style="text-align:right;">
+7.1749577
+</td>
+<td style="text-align:right;">
+55.1897612
+</td>
+<td style="text-align:right;">
+292.5275704
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MarkDown4
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+4213.162687
+</td>
+<td style="text-align:right;">
+8.359766e+03
+</td>
+<td style="text-align:right;">
+1401.2300
+</td>
+<td style="text-align:right;">
+2218.794997
+</td>
+<td style="text-align:right;">
+1837.7123520
+</td>
+<td style="text-align:right;">
+0.4600
+</td>
+<td style="text-align:right;">
+67474.8500
+</td>
+<td style="text-align:right;">
+67474.39000
+</td>
+<td style="text-align:right;">
+3.9881817
+</td>
+<td style="text-align:right;">
+18.3368551
+</td>
+<td style="text-align:right;">
+183.7866133
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MarkDown5
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+5056.916061
+</td>
+<td style="text-align:right;">
+1.780717e+04
+</td>
+<td style="text-align:right;">
+3470.4900
+</td>
+<td style="text-align:right;">
+3817.556240
+</td>
+<td style="text-align:right;">
+2491.0348680
+</td>
+<td style="text-align:right;">
+-185.1700
+</td>
+<td style="text-align:right;">
+771448.1000
+</td>
+<td style="text-align:right;">
+771633.27000
+</td>
+<td style="text-align:right;">
+38.8026276
+</td>
+<td style="text-align:right;">
+1656.5462412
+</td>
+<td style="text-align:right;">
+391.4845448
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CPI
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+175.587370
+</td>
+<td style="text-align:right;">
+3.996391e+01
+</td>
+<td style="text-align:right;">
+189.7076
+</td>
+<td style="text-align:right;">
+174.926293
+</td>
+<td style="text-align:right;">
+56.7786812
+</td>
+<td style="text-align:right;">
+129.8167
+</td>
+<td style="text-align:right;">
+228.9765
+</td>
+<td style="text-align:right;">
+99.15975
+</td>
+<td style="text-align:right;">
+0.0757006
+</td>
+<td style="text-align:right;">
+-1.8312551
+</td>
+<td style="text-align:right;">
+0.8785931
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Unemployment
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+7.252611
+</td>
+<td style="text-align:right;">
+1.684774e+00
+</td>
+<td style="text-align:right;">
+7.1910
+</td>
+<td style="text-align:right;">
+7.207248
+</td>
+<td style="text-align:right;">
+1.5700734
+</td>
+<td style="text-align:right;">
+3.6840
+</td>
+<td style="text-align:right;">
+12.8900
+</td>
+<td style="text-align:right;">
+9.20600
+</td>
+<td style="text-align:right;">
+0.4678311
+</td>
+<td style="text-align:right;">
+0.8763615
+</td>
+<td style="text-align:right;">
+0.0370392
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IsHoliday
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+2069
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NaN
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+Inf
+</td>
+<td style="text-align:right;">
+-Inf
+</td>
+<td style="text-align:right;">
+-Inf
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span>data<span class='op'>=</span><span class='va'>Features_data_set</span>,mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>Fuel_Price</span>,y<span class='op'>=</span><span class='va'>Unemployment</span>,color<span class='op'>=</span><span class='va'>Store</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>geom_point</span><span class='op'>(</span>alpha<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="FinalProject_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#this creates an index of rows in include in the training</span>
+<span class='co'>#literally lists the rows to keep</span>
+<span class='va'>trainIndex</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/caret/man/createDataPartition.html'>createDataPartition</a></span><span class='op'>(</span><span class='va'>Features_data_set</span><span class='op'>$</span><span class='va'>Fuel_Price</span>, p <span class='op'>=</span> <span class='fl'>.6</span>, list <span class='op'>=</span> <span class='cn'>FALSE</span>, times <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+
+<span class='co'>#rows to keep</span>
+<span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>trainIndex</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>kableExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kable_styling.html'>kable_styling</a></span><span class='op'>(</span><span class='st'>"striped"</span><span class='op'>)</span><span class='op'>%&gt;%</span>
+  <span class='fu'>kableExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/scroll_box.html'>scroll_box</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='st'>"100%"</span>,height<span class='op'>=</span><span class='st'>"200px"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; ">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Resample1
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+44
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+54
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+66
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+69
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+72
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+75
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+76
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+77
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+79
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+83
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+84
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+85
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+87
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+90
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+92
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+93
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+96
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+97
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+99
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+102
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+103
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+104
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+105
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+107
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+108
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+112
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+117
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+118
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+119
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+121
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+122
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+125
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+129
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+130
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+133
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+134
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+135
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+137
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+138
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+140
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+142
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+143
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+145
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+146
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+147
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+149
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+150
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+151
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+152
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+153
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+154
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+156
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+158
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+160
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+161
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+164
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+167
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+170
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+171
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+172
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+173
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+174
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+176
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+180
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+181
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+182
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+183
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+184
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+187
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+188
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+189
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+191
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+192
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+194
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+195
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+201
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+203
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+206
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+212
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+213
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+214
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+215
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+220
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+221
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+225
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+226
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+230
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+232
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+234
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+237
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+240
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+241
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+244
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+245
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+246
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+250
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+251
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+253
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+254
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+256
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+257
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+258
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+259
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+262
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+263
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+264
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+265
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+267
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+268
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+275
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+277
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+278
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+282
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+284
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+285
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+286
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+287
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+288
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+290
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+291
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+292
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+294
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+296
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+297
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+301
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+303
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+304
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+306
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+308
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+309
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+314
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+315
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+317
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+324
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+325
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+326
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+327
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+328
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+330
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+331
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+333
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+335
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+338
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+342
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+343
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+344
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+345
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+347
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+351
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+352
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+354
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+355
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+357
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+358
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+361
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+364
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+365
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+366
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+367
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+372
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+373
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+375
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+376
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+377
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+378
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+379
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+382
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+383
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+384
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+386
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+387
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+388
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+389
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+391
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+392
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+394
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+395
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+396
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+398
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+399
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+400
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+405
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+407
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+409
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+411
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+412
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+414
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+415
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+416
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+418
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+420
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+422
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+423
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+424
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+425
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+426
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+428
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+430
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+431
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+432
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+433
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+434
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+435
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+436
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+437
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+438
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+439
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+440
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+442
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+444
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+445
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+448
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+449
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+450
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+451
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+452
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+454
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+456
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+457
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+458
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+459
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+460
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+461
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+462
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+463
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+464
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+467
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+468
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+469
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+470
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+473
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+474
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+475
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+477
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+480
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+481
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+482
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+483
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+484
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+485
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+486
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+487
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+488
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+490
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+491
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+493
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+494
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+495
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+498
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+499
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+501
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+502
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+505
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+506
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+512
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+513
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+515
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+517
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+518
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+519
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+521
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+522
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+524
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+525
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+526
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+527
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+528
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+529
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+530
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+531
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+532
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+533
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+535
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+536
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+539
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+542
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+543
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+544
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+545
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+547
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+548
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+550
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+553
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+558
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+561
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+564
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+570
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+571
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+574
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+575
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+577
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+578
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+581
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+583
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+584
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+585
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+586
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+590
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+591
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+593
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+595
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+596
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+597
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+598
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+599
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+600
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+603
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+604
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+605
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+606
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+607
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+612
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+615
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+616
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+618
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+620
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+621
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+622
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+623
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+624
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+627
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+628
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+630
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+633
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+635
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+636
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+637
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+639
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+640
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+644
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+645
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+646
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+647
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+648
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+651
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+652
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+654
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+655
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+656
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+657
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+658
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+663
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+665
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+666
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+668
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+670
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+672
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+675
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+677
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+678
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+679
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+680
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+681
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+683
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+684
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+686
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+688
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+691
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+692
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+693
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+694
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+695
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+699
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+701
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+702
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+704
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+706
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+709
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+711
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+712
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+713
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+717
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+718
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+722
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+723
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+724
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+725
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+726
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+729
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+731
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+732
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+733
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+738
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+739
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+740
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+741
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+742
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+743
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+744
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+749
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+750
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+752
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+755
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+756
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+757
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+759
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+762
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+763
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+764
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+766
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+767
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+768
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+769
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+770
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+771
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+773
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+774
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+775
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+776
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+777
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+778
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+779
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+780
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+781
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+784
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+785
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+787
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+790
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+791
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+796
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+797
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+798
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+799
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+802
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+804
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+806
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+807
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+810
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+811
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+812
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+813
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+814
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+815
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+817
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+818
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+820
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+821
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+827
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+828
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+829
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+831
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+834
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+836
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+840
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+842
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+845
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+849
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+850
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+851
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+852
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+853
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+854
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+856
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+857
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+860
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+862
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+864
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+865
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+867
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+868
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+869
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+870
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+871
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+874
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+876
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+877
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+878
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+881
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+883
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+884
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+885
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+886
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+887
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+889
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+890
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+891
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+893
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+895
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+896
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+899
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+900
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+901
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+902
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+905
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+908
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+910
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+912
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+913
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+917
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+918
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+919
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+920
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+921
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+924
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+925
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+927
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+928
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+929
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+931
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+932
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+933
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+936
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+937
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+938
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+939
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+940
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+941
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+944
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+947
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+952
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+953
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+955
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+956
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+959
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+960
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+962
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+964
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+966
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+967
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+968
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+970
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+971
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+972
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+975
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+976
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+978
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+979
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+980
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+981
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+982
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+983
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+984
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+985
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+986
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+987
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+990
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+991
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+992
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+993
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+994
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+995
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+997
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+998
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1001
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1003
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1004
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1005
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1009
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1010
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1016
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1017
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1018
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1019
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1020
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1022
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1024
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1026
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1027
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1029
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1030
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1031
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1035
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1036
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1037
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1043
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1045
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1047
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1048
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1050
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1051
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1054
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1055
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1058
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1060
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1062
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1064
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1067
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1069
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1070
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1072
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1073
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1075
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1076
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1078
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1081
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1082
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1084
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1085
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1088
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1089
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1090
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1091
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1093
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1094
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1095
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1096
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1098
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1101
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1102
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1103
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1104
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1105
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1106
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1107
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1109
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1113
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1115
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1117
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1118
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1119
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1121
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1122
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1125
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1126
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1128
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1129
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1130
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1132
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1134
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1135
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1139
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1140
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1143
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1145
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1147
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1148
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1150
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1151
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1152
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1153
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1154
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1157
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1158
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1159
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1160
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1161
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1162
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1163
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1164
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1166
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1167
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1168
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1169
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1170
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1173
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1174
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1176
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1179
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1180
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1182
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1183
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1185
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1186
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1187
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1190
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1191
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1192
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1193
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1196
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1197
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1198
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1201
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1202
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1203
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1206
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1207
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1208
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1210
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1211
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1212
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1213
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1215
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1216
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1218
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1219
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1221
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1222
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1223
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1224
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1225
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1226
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1231
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1232
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1233
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1235
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1236
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1237
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1239
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1241
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1242
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1243
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1245
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1246
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1247
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1248
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1249
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1252
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1253
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1256
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1257
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1258
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1260
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1263
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1264
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1265
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1266
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1268
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1270
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1271
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1273
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1274
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1277
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1281
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1282
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1283
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1284
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1286
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1288
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1290
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1293
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1294
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1296
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1298
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1300
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1301
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1303
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1304
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1305
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1306
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1307
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1311
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1312
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1313
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1314
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1318
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1319
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1320
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1322
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1323
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1325
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1327
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1330
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1331
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1333
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1334
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1339
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1340
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1341
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1342
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1344
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1345
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1346
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1347
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1348
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1352
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1354
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1355
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1357
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1359
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1360
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1362
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1363
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1364
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1365
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1367
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1368
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1369
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1371
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1372
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1373
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1374
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1375
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1376
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1377
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1379
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1380
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1381
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1382
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1384
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1385
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1387
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1389
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1390
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1391
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1393
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1395
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1396
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1397
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1398
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1399
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1401
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1402
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1404
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1405
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1409
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1414
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1415
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1417
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1418
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1420
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1421
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1422
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1424
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1425
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1427
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1428
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1430
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1431
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1432
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1434
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1436
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1437
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1438
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1439
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1442
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1443
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1445
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1446
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1447
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1449
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1451
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1452
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1453
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1454
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1455
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1459
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1460
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1461
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1463
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1465
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1466
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1468
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1473
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1477
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1478
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1479
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1480
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1481
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1482
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1485
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1486
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1487
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1489
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1490
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1491
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1492
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1493
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1494
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1495
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1496
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1497
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1499
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1501
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1503
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1504
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1506
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1507
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1509
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1510
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1511
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1513
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1514
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1515
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1517
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1518
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1519
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1522
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1525
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1526
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1530
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1531
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1535
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1536
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1537
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1539
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1541
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1542
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1545
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1546
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1547
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1549
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1550
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1552
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1554
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1555
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1557
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1559
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1560
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1561
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1562
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1565
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1566
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1567
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1568
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1570
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1571
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1572
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1573
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1575
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1577
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1578
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1580
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1581
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1582
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1584
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1585
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1586
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1587
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1588
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1589
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1591
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1592
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1593
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1594
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1595
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1597
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1598
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1601
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1603
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1604
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1605
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1606
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1607
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1608
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1609
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1610
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1611
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1614
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1615
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1620
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1622
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1627
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1628
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1630
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1632
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1633
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1636
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1638
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1639
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1640
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1642
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1643
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1644
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1646
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1647
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1649
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1651
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1652
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1653
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1655
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1656
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1657
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1659
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1660
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1661
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1662
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1664
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1665
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1666
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1667
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1668
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1671
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1672
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1673
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1674
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1675
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1678
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1679
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1682
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1684
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1685
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1687
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1688
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1693
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1694
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1697
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1698
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1699
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1701
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1702
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1703
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1704
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1706
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1712
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1715
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1717
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1718
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1721
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1724
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1726
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1727
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1732
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1733
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1734
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1736
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1737
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1740
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1742
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1743
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1744
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1747
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1751
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1753
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1755
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1756
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1757
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1758
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1759
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1761
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1764
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1767
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1768
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1769
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1770
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1774
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1775
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1777
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1779
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1780
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1781
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1782
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1783
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1786
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1788
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1789
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1793
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1794
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1795
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1796
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1797
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1801
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1802
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1803
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1804
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1805
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1807
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1811
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1812
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1813
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1815
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1817
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1818
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1819
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1820
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1821
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1823
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1827
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1828
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1831
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1832
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1835
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1836
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1837
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1839
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1841
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1842
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1844
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1847
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1848
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1849
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1850
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1851
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1853
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1854
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1855
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1856
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1859
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1861
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1862
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1864
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1867
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1868
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1869
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1870
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1873
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1874
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1875
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1877
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1878
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1880
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1882
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1883
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1888
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1890
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1894
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1895
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1896
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1897
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1898
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1899
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1901
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1902
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1906
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1907
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1908
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1910
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1911
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1914
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1917
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1919
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1923
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1924
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1926
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1927
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1928
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1931
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1932
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1934
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1936
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1937
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1938
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1939
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1940
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1942
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1943
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1944
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1945
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1946
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1947
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1949
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1951
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1952
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1953
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1954
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1955
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1956
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1957
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1962
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1964
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1965
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1966
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1969
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1971
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1973
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1976
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1978
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1979
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1980
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1982
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1984
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1986
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1987
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1989
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1991
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1992
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1994
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1996
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1998
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1999
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2002
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2008
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2010
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2011
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2013
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2014
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2017
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2019
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2020
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2021
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2023
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2024
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2025
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2027
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2029
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2030
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2031
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2032
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2033
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2035
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2036
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2037
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2040
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2041
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2046
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2047
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2048
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2049
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2050
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2051
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2054
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2056
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2059
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2060
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2061
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2064
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2067
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2068
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#grab the data</span>
+<span class='co'>#take these rows</span>
+<span class='va'>FuelTrain</span> <span class='op'>&lt;-</span> <span class='va'>Features_data_set</span><span class='op'>[</span> <span class='va'>trainIndex</span>,<span class='op'>]</span>
+<span class='co'>#don't take these rows</span>
+<span class='va'>FuelTest</span>  <span class='op'>&lt;-</span> <span class='va'>Features_data_set</span><span class='op'>[</span><span class='op'>-</span><span class='va'>trainIndex</span>,<span class='op'>]</span>
+
+<span class='co'>#we now have training and testing data sets</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#for the algorithm we are using it requires that we standardize</span>
+
+<span class='co'>#center= subtract the means and </span>
+<span class='co'>#scale = divide by standard deviation</span>
+<span class='co'>#?preProcess sets the conversion up </span>
+<span class='va'>preProcValues</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/caret/man/preProcess.html'>preProcess</a></span><span class='op'>(</span><span class='va'>FuelTrain</span>, method <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"center"</span>, <span class='st'>"scale"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>preProcValues</span>
+</code></pre>
+</div>
+<pre><code>Created from 1242 samples and 12 variables
+
+Pre-processing:
+  - centered (10)
+  - ignored (2)
+  - scaled (10)</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#this predict actual change the variables</span>
+<span class='va'>trainTransformed</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>preProcValues</span>, <span class='va'>FuelTrain</span><span class='op'>)</span>
+<span class='co'>#repeat for testing</span>
+<span class='va'>preProcValues</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/caret/man/preProcess.html'>preProcess</a></span><span class='op'>(</span><span class='va'>FuelTest</span>, method <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"center"</span>, <span class='st'>"scale"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>testTransformed</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>preProcValues</span>, <span class='va'>FuelTest</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#data is split and standardized</span>
+<span class='co'>#time to run the model</span>
+<span class='co'>#fit knn</span>
+
+<span class='co'>#use train function and set up the equation</span>
+<span class='va'>knn_fit</span><span class='op'>&lt;-</span><span class='fu'><a href='https://rdrr.io/pkg/caret/man/train.html'>train</a></span><span class='op'>(</span><span class='va'>Fuel_Price</span><span class='op'>~</span><span class='va'>Unemployment</span>,
+              <span class='co'>#data we are using</span>
+              data<span class='op'>=</span><span class='va'>trainTransformed</span>,
+              <span class='co'>#algorithm we are using</span>
+              method<span class='op'>=</span><span class='st'>"knn"</span>,
+              <span class='co'>#the hyper parameter or tuning parameter is the</span>
+              <span class='co'>#number of neighbors...here we set it to 5</span>
+              tuneGrid<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>k<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'>#this is the object that holds the model</span>
+<span class='va'>knn_fit</span>
+</code></pre>
+</div>
+<pre><code>k-Nearest Neighbors 
+
+1242 samples
+   1 predictor
+
+No pre-processing
+Resampling: Bootstrapped (25 reps) 
+Summary of sample sizes: 1242, 1242, 1242, 1242, 1242, 1242, ... 
+Resampling results:
+
+  RMSE       Rsquared   MAE      
+  0.7758434  0.4234819  0.6194642
+
+Tuning parameter &#39;k&#39; was held constant at a value of 5</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#predict on the test set</span>
+<span class='va'>knn_pred</span><span class='op'>&lt;-</span><span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>knn_fit</span>,<span class='va'>testTransformed</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>The Root Mean Square Error (RMSE) for this data is 0.7862285 which means that the data is close to the line of best fit. A high RMSE, such as the one produced, means that there is a high possibility that the data used will not be able to make a prediction with the dataset used. This data can be useful because it will let you know if the data you are using will be a close prediction or not.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+---
+title: "Final Project"
+description: |
+  New dataset
+
+date: "`r Sys.Date()`"
+output: distill::distill_article
+
+---
+The dataset used for this project come from Kaggle, and it shows how fuel prices correlate with Unemployment. In this project, I will try to predict that the higher the unemployment leads to higher gas prices.
+
+We begin by looking at the descriptive analytics.The standard deviation shows that Fuel Prices are close to the norm at 0.43, while Unemployment is skewed by 1.88.
+
+The machine learning model used is the K-nn (Nearest Neighbor) model. This model is an algorithim that can solve classification and regression problems.
+
+```{r}
+load(file="Features_data_set.rda")
+library(tidyverse)
+library(caret)
+Features_data_set=na.omit(Features_data_set)
+```
+```{r}
+knitr::kable(psych::describe(Features_data_set))%>%
+  kableExtra::kable_styling("striped")%>%
+  kableExtra::scroll_box(width = "100%",height="300px")
+```
+
+
+```{r}
+ggplot(data=Features_data_set,mapping = aes(x=Fuel_Price,y=Unemployment,color=Store))+geom_point(alpha=0.5)
+
+```
+
+```{r}
+#this creates an index of rows in include in the training
+#literally lists the rows to keep
+trainIndex <- createDataPartition(Features_data_set$Fuel_Price, p = .6, list = FALSE, times = 1)
+
+#rows to keep
+knitr::kable(trainIndex)%>%
+  kableExtra::kable_styling("striped")%>%
+  kableExtra::scroll_box(width = "100%",height="200px")
+
+#grab the data
+#take these rows
+FuelTrain <- Features_data_set[ trainIndex,]
+#don't take these rows
+FuelTest  <- Features_data_set[-trainIndex,]
+
+#we now have training and testing data sets
+
+
+```
+
+```{r, echo=TRUE}
+#for the algorithm we are using it requires that we standardize
+
+#center= subtract the means and 
+#scale = divide by standard deviation
+#?preProcess sets the conversion up 
+preProcValues <- preProcess(FuelTrain, method = c("center", "scale"))
+
+preProcValues
+```
+
+```{r, echo=TRUE}
+#this predict actual change the variables
+trainTransformed <- predict(preProcValues, FuelTrain)
+#repeat for testing
+preProcValues <- preProcess(FuelTest, method = c("center", "scale"))
+testTransformed <- predict(preProcValues, FuelTest)
+
+```
+
+```{r, echo=TRUE}
+#data is split and standardized
+#time to run the model
+#fit knn
+
+#use train function and set up the equation
+knn_fit<-train(Fuel_Price~Unemployment,
+              #data we are using
+              data=trainTransformed,
+              #algorithm we are using
+              method="knn",
+              #the hyper parameter or tuning parameter is the
+              #number of neighbors...here we set it to 5
+              tuneGrid=data.frame(k=5))
+
+#this is the object that holds the model
+knn_fit
+
+#predict on the test set
+knn_pred<-predict(knn_fit,testTransformed)
+
+
+```
+The Root Mean Square Error (RMSE) for this data is 0.7862285 which means that the data is close to the line of best fit. A high RMSE, such as the one produced, means that there is a high possibility that the data used will not be able to make a prediction with the dataset used. This data can be useful because it will let you know if the data you are using will be a close prediction or not.
