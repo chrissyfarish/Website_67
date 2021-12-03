@@ -18,3 +18,4 @@ output:
 I am a trained accountant living in the Mississippi Delta area. 
 Currently I working on my Masters of Professional Accounting degree with a Minor in Data Analytics. I love talking about books, cats, and hunting.
 
+![](Daisy.JPG){width=85%}
