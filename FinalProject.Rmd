@@ -93,6 +93,10 @@ knn_fit
 #predict on the test set
 knn_pred<-predict(knn_fit,testTransformed)
 
-
 ```
+```{r}
+plot(knn_pred)
+```
+
+
 The Root Mean Square Error (RMSE) for this data is 0.7862285 which means that the data is close to the line of best fit. A high RMSE, such as the one produced, means that there is a high possibility that the data used will not be able to make a prediction with the dataset used. This data can be useful because it will let you know if the data you are using will be a close prediction or not.
