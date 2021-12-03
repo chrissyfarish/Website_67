@@ -1,7 +1,7 @@
 name: "."
 title: "The most awesome website ever!"
 description: |
-  mfeo
+  The most awesome website ever!
 output_dir: "docs"
 theme: postcards.css
 navbar:
