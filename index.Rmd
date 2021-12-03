@@ -1,6 +1,6 @@
 ---
 title: "Chrissy Farish"
-image: "cf.jpg"
+image: "cf.JPG"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/chrissy-farish-102800226/"
