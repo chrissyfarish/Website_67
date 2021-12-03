@@ -1,6 +1,6 @@
 ---
 title: "Chrissy Farish"
-image: "cf.jpg"
+image: "Daisy.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/chrissy-farish-102800226/"
@@ -18,4 +18,4 @@ output:
 I am a trained accountant living in the Mississippi Delta area. 
 Currently I working on my Masters of Professional Accounting degree with a Minor in Data Analytics. I love talking about books, cats, and hunting.
 
-![](Daisy.JPG){width=85%}
+![](cf.JPG){width=85%}
