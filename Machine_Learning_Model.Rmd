@@ -1,12 +1,12 @@
 ---
 title: "Machine Learning Model"
 description: |
-  Linear Regression
+  Classification
 
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
-Linear regression is simply using various types of data to determine which one is the best one to use when making predictions. Then it uses a graph to determine how well the prediction is.  Finally, it draws a line through a scattergraph so you can see how close the data gets to the line. This can be useful in accounting during an audit. It can predict which areas will need the most areas of audit.
+Classification modeling is simply looking at the data and being able to separate them into certain categories. This type of data modeling predicts how well the data set will fall into one of the categories.
 
 **Change the p=.6 to p=.75 in the Data Pre-Processing section. How did the classification results change?**
 
@@ -82,8 +82,6 @@ knn_pred<-predict(knn_fit,testTransformed)
 confusionMatrix(knn_pred,testTransformed$Species)
 ```
 
-By comparing the variances we see that as the number of components increase each individual component's explained variance drops.
-
-
+Classification uses a training and testing data set in order to find patterns in future sets of data. An example is using a decision tree to determine how to proceed with the data set. This can be used in accounting when performing an audit.
 
 

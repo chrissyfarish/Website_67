@@ -102,6 +102,9 @@ int_results<-predict(model_int,FuelTest)
 ###compute fit
 summary(model_int)
 
+knitr::kable(caret::RMSE(int_results,FuelTest$Fuel_Price),col.names = "RMSE Test")
+knitr::kable(caret::RMSE(int_results,FuelTrain$Fuel_Price),col.names = "RMSE Train")
+
 FuelTest$Sample<-"Testing"
 FuelTrain$Sample<-"Training"
 
@@ -110,13 +113,27 @@ Combined_Fuel<-rbind(FuelTest,FuelTrain)
 ggplot(Combined_Fuel,aes(x=Fuel_Price, y=Unemployment,color=Sample)) +
   geom_point(alpha=.5) +
   theme_minimal() +
-  labs(x='X Values', y='Y Values', title='Linear Regression Plot') +
+  labs(x='Fuel Price', y='Unemployment', title='Linear Regression Plot') +
   theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
   geom_abline(aes(slope=model_int$coefficients[[1]],intercept=0),color="red")
 ```
+The Linear Regression Model shows that the data is extremely scattered and clustered to form any true conclusion from the data. This Model and the one above both show outliers in the same areas. Also, the RMSE are nearly identical for the Training data and the testing data.  This tells me that this is a bad set of data to use for analysis.
 
+```{r}
+library(tidyverse)
+#create residuals
+testwithpred<-as.data.frame(cbind(int_results,FuelTest))
+#create residuals
+testwithpred<-testwithpred%>%
+  rename(prediction=int_results)%>%
+  mutate(error=Fuel_Price-prediction)
 
-
-
-
-The Root Mean Square Error (RMSE) for this data is 0.7862285 which means that the data is close to the line of best fit. A high RMSE, such as the one produced, means that there is a high possibility that the data used will not be able to make a prediction with the dataset used. This data can be useful because it will let you know if the data you are using will be a close prediction or not.
+#create regression plot with customized style
+ggplot(testwithpred,aes(x=Fuel_Price, y=error)) +
+  geom_point(alpha=.5,color="deepskyblue") +
+  theme_minimal() +
+  labs(x='Fuel_Price', y='Error', title='Regression Error Plot') +
+  theme(plot.title = element_text(hjust=0.25, size=20, face='bold')) +
+  geom_hline(yintercept=0,color="red",linetype="dashed")
+```
+The Regression Error Plot shows that the data in this data set creates a bad model for linear regression.
