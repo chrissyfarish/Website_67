@@ -95,8 +95,28 @@ knn_pred<-predict(knn_fit,testTransformed)
 
 ```
 ```{r}
-plot(knn_pred)
+#fit simple linear regression model
+model_int <- lm(Unemployment ~ Unemployment , data = FuelTrain)
+
+int_results<-predict(model_int,FuelTest)
+###compute fit
+summary(model_int)
+
+FuelTest$Sample<-"Testing"
+FuelTrain$Sample<-"Training"
+
+Combined_Fuel<-rbind(FuelTest,FuelTrain)
+#create regression plot with customized style
+ggplot(Combined_Fuel,aes(x=Fuel_Price, y=Unemployment,color=Sample)) +
+  geom_point(alpha=.5) +
+  theme_minimal() +
+  labs(x='X Values', y='Y Values', title='Linear Regression Plot') +
+  theme(plot.title = element_text(hjust=0.5, size=20, face='bold')) +
+  geom_abline(aes(slope=model_int$coefficients[[1]],intercept=0),color="red")
 ```
+
+
+
 
 
 The Root Mean Square Error (RMSE) for this data is 0.7862285 which means that the data is close to the line of best fit. A high RMSE, such as the one produced, means that there is a high possibility that the data used will not be able to make a prediction with the dataset used. This data can be useful because it will let you know if the data you are using will be a close prediction or not.
